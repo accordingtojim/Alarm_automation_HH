@@ -60,7 +60,7 @@ def file_creation_1( path_to_template_BB):
                         + str(HH)\
                         + " - "\
                         + name_PI\
-                        + str(HH)
+                        + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = name_HH\
                         + str(HH)\
                         + "_BMS"\
