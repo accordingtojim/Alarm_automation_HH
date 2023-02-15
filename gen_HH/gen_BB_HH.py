@@ -40,33 +40,22 @@ def file_creation_1( path_to_template_BB):
                 name_PI = "PI0"
             for BB in range(1 , array_parsed[HH-1] + 1):
                 for i in range(1,number_row+1):
-                    if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
-                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + " | "\
-                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value) 
-                        ws.cell(row=i+counter*number_row,column=3).value = name_HH\
-                        + str(HH)\
-                        + "_BMS"\
-                        + str(BB)\
-                        + "_"\
-                        + ws.cell(row=i+counter*number_row,column=3).value                                    
-                    else:
-                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + " | "\
-                        + "BB0"\
-                        + str(BB)\
-                        + " - "\
-                        + name_HH\
-                        + str(HH)\
-                        + " - "\
-                        + name_PI\
-                        + str(PI)
-                        ws.cell(row=i+counter*number_row,column=3).value = name_HH\
-                        + str(HH)\
-                        + "_BMS"\
-                        + str(BB)\
-                        + "_"\
-                        + ws.cell(row=i+counter*number_row,column=3).value
+                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                    + " | "\
+                    + "BB0"\
+                    + str(BB)\
+                    + " - "\
+                    + name_HH\
+                    + str(HH)\
+                    + " - "\
+                    + name_PI\
+                    + str(PI)
+                    ws.cell(row=i+counter*number_row,column=3).value = name_HH\
+                    + str(HH)\
+                    + "_BMS"\
+                    + str(BB)\
+                    + "_"\
+                    + ws.cell(row=i+counter*number_row,column=3).value
                 counter += 1
     ws.insert_cols(2)
     wb.save(path_to_new_template)

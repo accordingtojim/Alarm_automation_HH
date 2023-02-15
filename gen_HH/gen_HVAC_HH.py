@@ -37,26 +37,17 @@ def file_creation_4( path_to_template_HVAC):
             name_PI = "PI0"
         for HVAC in range(1 , array_parsed[HH-1] + 1):
             for i in range(1, number_row+1):
-                if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
-                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                    + " | "\
-                    + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)   
-                    ws.cell(row=i+counter*number_row,column=3).value = name_HH\
-                    + str(HH)\
-                    + "_HVAC_AIR3000_DB_"\
-                    + str(ws.cell(row=i+counter*number_row,column=3).value)   
-                else:
-                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                    + " - "\
-                    + name_HH\
-                    + str(HH)\
-                    + " - "\
-                    + name_PI\
-                    + str(HH)
-                    ws.cell(row=i+counter*number_row,column=3).value = name_HH\
-                    + str(HH)\
-                    + "_HVAC_AIR3000_DB_"\
-                    + str(ws.cell(row=i+counter*number_row,column=3).value)
+                ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                + " - "\
+                + name_HH\
+                + str(HH)\
+                + " - "\
+                + name_PI\
+                + str(HH)
+                ws.cell(row=i+counter*number_row,column=3).value = name_HH\
+                + str(HH)\
+                + "_HVAC_AIR3000_DB_"\
+                + str(ws.cell(row=i+counter*number_row,column=3).value)
             counter += 1
     ws.insert_cols(2)
     wb.save(path_to_new_template)
