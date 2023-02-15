@@ -7,7 +7,7 @@ def file_creation_1( path_to_template_BB):
     counter = 0
     local_type_HH = config.convert_to_int(config.array_type_HH)
     local_n_BB = config.convert_to_int(config.n_battery_bank)
-    local_HH_GUI = int(config.num_HH_GUI)
+    local_HH_GUI = config.convert_to_int(config.num_HH_GUI)
     local_n_PI = config.convert_to_int(config.n_PI)
     path_to_new_template = (path_to_template_BB.replace('.xlsx','')) + '_new_BB' + '.xlsx'
     config.global_list.append(path_to_new_template)
