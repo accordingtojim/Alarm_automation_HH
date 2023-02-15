@@ -92,13 +92,13 @@ config.n_PI = number_of_PI.get()
 
 # hybrid house
 if config.num_HH_GUI != '':
-    # gen_HH.gen_INV_HH.file_creation_0('./template_excel/template_CBESSHD_CL.xlsx')
-    # gen_HH.gen_AUX_HH.file_creation_2('./template_excel/template_CBESSHD_AUX.xlsx')
-    # gen_HH.gen_BB_HH.file_creation_1('./template_excel/template_BB_samsung.xlsx')
-    # gen_HH.gen_BR_HH.file_creation_6('./template_excel/template_BR_samsung.xlsx') 
+    gen_HH.gen_INV_HH.file_creation_0('./template_excel/template_CBESSHD_CL.xlsx')
+    gen_HH.gen_AUX_HH.file_creation_2('./template_excel/template_CBESSHD_AUX.xlsx')
+    gen_HH.gen_BB_HH.file_creation_1('./template_excel/template_BB_samsung.xlsx')
+    gen_HH.gen_BR_HH.file_creation_6('./template_excel/template_BR_samsung.xlsx') 
     gen_HH.gen_HVAC_HH.file_creation_4('./template_excel/template_HVAC_HH.xlsx')
     gen_HH.gen_PEMS_HH.file_creation_3('./template_excel/template_PEMS_HH.xlsx')
-    # gen_HH.gen_SKID_HH.file_creation_5('./template_excel/template_SKID_HH.xlsx')
+    gen_HH.gen_SKID_HH.file_creation_5('./template_excel/template_SKID_HH.xlsx')
     
 
 
