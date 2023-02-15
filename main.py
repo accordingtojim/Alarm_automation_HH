@@ -18,51 +18,51 @@ root.title('Number of Power Island')
 number_of_PI = StringVar()
 number_of_HH = StringVar()
 
-def PI_clicked():
-    # callback when the login button clicked
-    msg = f'You entered email: {number_of_PI.get()}' 
-    showinfo(title='Information',message=msg)
+# def PI_clicked():
+#     # callback when the login button clicked
+#     msg = f'You entered email: {number_of_PI.get()}' 
+#     showinfo(title='Information',message=msg)
 
 # empty label 1
 empty_label = Label(root, text="")
 empty_label.grid(row=0,column=0,columnspan=3,sticky=N,pady=20)
 
-# # PI label 
-# PI_label = Label(root, text="Insert the number of total Power Island")
-# PI_label.grid(row=1,column=2,padx=150)
+# PI label 
+PI_label = Label(root, text="Insert the number of total Power Island")
+PI_label.grid(row=1,column=2,padx=150)
 
-# # empty label 2
-# empty_label = Label(root, text="")
-# empty_label.grid(row=2,column=0,columnspan=3,sticky=N,pady=0)
-
-# # PI entry
-# PI_entry = Entry(root, textvariable=number_of_PI)
-# PI_entry.grid(row=3,column=2)
-# PI_entry.focus()
-
-# # empty label 3
-# empty_label = Label(root, text="")
-# empty_label.grid(row=4,column=0,columnspan=3,sticky=N,pady=20)
-
-# HH label 
-HH_label = Label(root, text="Insert the number of Hybrid House")
-HH_label.grid(row=1,column=2,padx=150)
-
-# empty label 4
+# empty label 2
 empty_label = Label(root, text="")
 empty_label.grid(row=2,column=0,columnspan=3,sticky=N,pady=0)
 
-# HH entry
-HH_entry = Entry(root, textvariable=number_of_HH)
-HH_entry.grid(row=3,column=2)
+# PI entry
+PI_entry = Entry(root, textvariable=number_of_PI)
+PI_entry.grid(row=3,column=2)
+PI_entry.focus()
 
-# empty label 5
+# empty label 3
 empty_label = Label(root, text="")
 empty_label.grid(row=4,column=0,columnspan=3,sticky=N,pady=20)
 
+# HH label 
+HH_label = Label(root, text="Insert the number of Hybrid House")
+HH_label.grid(row=5,column=2,padx=150)
+
+# empty label 4
+empty_label = Label(root, text="")
+empty_label.grid(row=6,column=0,columnspan=3,sticky=N,pady=0)
+
+# HH entry
+HH_entry = Entry(root, textvariable=number_of_HH)
+HH_entry.grid(row=7,column=2)
+
+# empty label 5
+empty_label = Label(root, text="")
+empty_label.grid(row=8,column=0,columnspan=3,sticky=N,pady=20)
+
 # Define HH button
 OK_button = Button(root,text='Define HH', command=dhh.openNewWindow)
-OK_button.grid(row=3,column=2,padx=10,sticky=E)
+OK_button.grid(row=7,column=2,padx=10,sticky=E)
 
 # next button
 # next_button = Button(root,text='Define PI', command=nw.openNewWindow)
@@ -86,17 +86,18 @@ root.mainloop()
 ###############################################################################
 #INIZIO GESTIONE FILE EXCEL
 
-config.num_HH_GUI = number_of_HH.get()
+config.num_HH_GUI.append(number_of_HH.get())
 config.n_PI = number_of_PI.get()
+
 
 # hybrid house
 if config.num_HH_GUI != '':
-    gen_HH.gen_INV_HH.file_creation_0('./template_excel/template_CL_CBESSHD.xlsx')
-    gen_HH.gen_BB_HH.file_creation_1('./template_excel/template_BB_samsung.xlsx')
-    gen_HH.gen_AUX_HH.file_creation_2('./template_excel/template_AUX_CBESSHD.xlsx')
-    gen_HH.gen_HVAC_HH.file_creation_4('./template_excel/template_HVAC_HH.xlsx')
-    gen_HH.gen_PEMS_HH.file_creation_3('./template_excel/template_PEMS_HH.xlsx')
-    gen_HH.gen_SKID_HH.file_creation_5('./template_excel/template_SKID_HH.xlsx')
+    # gen_HH.gen_INV_HH.file_creation_0('./template_excel/template_CL_CBESSHD.xlsx')
+    # gen_HH.gen_BB_HH.file_creation_1('./template_excel/template_BB_samsung.xlsx')
+    # gen_HH.gen_AUX_HH.file_creation_2('./template_excel/template_AUX_CBESSHD.xlsx')
+    # gen_HH.gen_HVAC_HH.file_creation_4('./template_excel/template_HVAC_HH.xlsx')
+    # gen_HH.gen_PEMS_HH.file_creation_3('./template_excel/template_PEMS_HH.xlsx')
+    # gen_HH.gen_SKID_HH.file_creation_5('./template_excel/template_SKID_HH.xlsx')
     gen_HH.gen_BR_HH.file_creation_6('./template_excel/template_BR_samsung.xlsx')
 
 

@@ -16,8 +16,9 @@ global_list = []
 n_HVAC_HH = []
 n_HVAC = []
 counter = 0
-num_HH_GUI = 0
+num_HH_GUI = []
 n_PI = 0
+
 
 def num_assign(i):
     match str(i):
