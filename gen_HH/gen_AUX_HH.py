@@ -22,7 +22,7 @@ def file_creation_2( path_to_template_AUX):
         number_row += 1
     number_row -= 1
     array_parsed3 = config.p_array_arrangement(local_type_HH,local_HH_GUI)
-    for n in range(1,local_HH_GUI*2):
+    for n in range(1,local_n_PI*2):
             for j in range(1,number_column+1):
                 for i in range(1,number_row+1):
                     ws.cell(row=i+n*number_row,column=j).value=ws.cell(row=i,column=j).value
