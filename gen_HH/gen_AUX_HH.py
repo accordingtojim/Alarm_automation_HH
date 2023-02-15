@@ -39,7 +39,7 @@ def file_creation_2( path_to_template_AUX):
                 for i in range(1,number_row+1):
                     ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                     + " | "\
-                    + "QAUX,PCS"\
+                    + "AUX,PCS"\
                     + str(AUX)\
                     + " - "\
                     + name_HH\
